@@ -2,11 +2,12 @@
 <html>
 <head>
 <meta charset = "utf-8"/></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title> Week01＿RWD網頁前端版面作業 </title>
 <style type = "text/css">
 
 .head_box{ 
-    display:flex;
+    display:flex;flex-wrap: wrap;
     padding:10px;
 }
 .head_box>.head_table1{
@@ -14,15 +15,22 @@
     float:left;padding:10px;
 }
 .head_box>.head_table2{
+    background-color: #B0D8FF;;font-weight:bold;font-size:20px;
+    padding:10px;
+}
+.head_box>.head_table3{
     color:rgb(3, 3, 3);font-weight:bold;font-size:20px;
     float:right;padding:10px;margin-left: auto;
 }
 
+.change_img {
+    display: none; float:left;margin-left: auto;
+} 
+
 .middle_box{
     display:flex;
     justify-content: center;align-items: center; 
-    background-color: #B0D8FF;height: 300px;
-   padding:10px;
+    background-color: #B0D8FF;height: 300px;padding:10px;
 }
 
 .middle_box>.content{
@@ -30,17 +38,36 @@
 }
 
 .box_div {
-  display: flex;flex-direction:row ; justify-content:space-around ;
-    width: 62.5% ;padding-top:20px;margin:0% auto ;text-align:center; border:1px solid red;
+    display: flex; justify-content:space-around ;align-content: center;
+    width: 62.5%; padding-top:20px; margin:0% auto ; border:1px solid red;
+    flex-wrap: wrap;
 } 
 
 .box_div2 {
-  padding: 0% auto;align-items: center;
+    padding: 0% auto;align-items: center;flex-wrap: wrap;
 } 
 
-/* Clearfix (clear floats) */
+.img_f{
+    object-fit: cover;
+}
 .caption{
-    background-color: #B0D8FF;color:black;
+    margin-top:-5px;padding: 0% auto; 
+    width:270px ;background-color: #B0D8FF;color:black;
+    text-align: center;
+} 
+@media (max-width:1200px){
+    .box_div2{width:45%;}
+}
+@media (max-width:600px){
+    .box_div2{
+        width:90%;
+        }
+    .head_table3{
+        display:none;
+        }
+    .change_img{
+        display:block;
+        }
 }
 
 </style>
@@ -48,49 +75,82 @@
 <body style="margin:0px; background-color: #eeeeee;">
     <div class="head_box">
         <div class="head_table1">My Website</div>
-        <div class="head_table2">Item1 Item2 Itme3 Item4</div>
+        <div class="head_table2"></div>
+        <div class="head_table3">Item1 Item2 Itme3 Item4</div>
+        <img src="hamburger.png" width="40px" class="change_img">
     </div> 
     <div class="middle_box">
         <div class="content">Welcome to MyHome</div>
     </div>
-
-<!--ccc -->
 <div class="box_div">
     <div class="box_div2">
-        <img src="sunset.jpg" width="200px">
+        <div class="img_f">
+            <img src="sunset.jpg" width="270px">
+        </div>
         <div class="caption">Title1</div>
     </div>
     <div class="box_div2">
-        <img src="sunset.jpg" width="200px">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
         <div class="caption">Title2</div>
     </div>
     <div class="box_div2">
-        <img src="sunset.jpg" width="200px">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
         <div class="caption">Title3</div>
     </div>
     <div class="box_div2">
-        <img src="sunset.jpg" width="200px">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
         <div class="caption">Title4</div>
     </div>
 </div>
 <div class="box_div">
-    <div>
-        <img src="sunset.jpg" width="200px">
-        <div class="caption">Title1</div>
+    <div class="box_div2">
+        <div class="img_f">
+            <img src="sunset.jpg" width="270px">
+        </div>
+        <div class="caption">Title5</div>
     </div>
-    <div>
-        <img src="sunset.jpg" width="200px">
-        <div class="caption">Title2</div>
+    <div class="box_div2">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
+        <div class="caption">Title6</div>
     </div>
-    <div>
-        <img src="sunset.jpg" width="200px">
-        <div class="caption">Title3</div>
+    <div class="box_div2">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
+        <div class="caption">Title7</div>
     </div>
-    <div>
-        <img src="sunset.jpg" width="200px">
-        <div class="caption">Title4</div>
+    <div class="box_div2">
+        <div>
+            <img src="sunset.jpg" width="270px">
+        </div>
+        <div class="caption">Title8</div>
     </div>
 </div>
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
