@@ -15,7 +15,7 @@
     float:left;padding:10px;
 }
 .head_box>.head_table2{
-    background-color: #B0D8FF;;font-weight:bold;font-size:20px;
+    font-weight:bold;font-size:20px;
     padding:10px;
 }
 .head_box>.head_table3{
@@ -30,7 +30,7 @@
 .middle_box{
     display:flex;
     justify-content: center;align-items: center; 
-    background-color: #B0D8FF;height: 300px;padding:10px;
+    background-color: #B0D8FF;height: 300px;padding:10px;width: 100%;
 }
 
 .middle_box>.content{
@@ -38,29 +38,38 @@
 }
 
 .box_div {
-    display: flex; justify-content:space-around ;align-content: center;
-    width: 62.5%; padding-top:20px; margin:0% auto ; border:1px solid red;
+    display: flex; justify-content:space-around ;align-content: center;width:1200px ;
+    padding-top:20px; margin:0% auto ;
     flex-wrap: wrap;
 } 
 
 .box_div2 {
-    padding: 0% auto;align-items: center;flex-wrap: wrap;
+    padding: 0% auto;align-items: center;flex-wrap: wrap;max-width: 20%;margin:1%;
 } 
 
-.img_f{
-    object-fit: cover;
-}
 .caption{
     margin-top:-5px;padding: 0% auto; 
-    width:270px ;background-color: #B0D8FF;color:black;
+    width:100% ;background-color: #B0D8FF;color:black;
     text-align: center;
 } 
 @media (max-width:1200px){
-    .box_div2{width:45%;}
+    .box_div{
+        width: 1080px;
+    }
+    .box_div2{
+        flex: 45%;
+        max-width: 45%;
+        align-content: center;
+    }
 }
 @media (max-width:600px){
+    .box_div{
+        width: 540px;
+    }
     .box_div2{
-        width:90%;
+        flex: 90%;
+        max-width: 90%;
+        align-content: center;
         }
     .head_table3{
         display:none;
@@ -75,7 +84,7 @@
 <body style="margin:0px; background-color: #eeeeee;">
     <div class="head_box">
         <div class="head_table1">My Website</div>
-        <div class="head_table2"></div>
+        <!-- <div class="head_table2"></div> -->
         <div class="head_table3">Item1 Item2 Itme3 Item4</div>
         <img src="hamburger.png" width="40px" class="change_img">
     </div> 
@@ -84,58 +93,58 @@
     </div>
 <div class="box_div">
     <div class="box_div2">
-        <div class="img_f">
-            <img src="sunset.jpg" width="270px">
+        <div>
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title1</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title2</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title3</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title4</div>
     </div>
 </div>
 <div class="box_div">
     <div class="box_div2">
-        <div class="img_f">
-            <img src="sunset.jpg" width="270px">
+        <div>
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title5</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title6</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title7</div>
     </div>
     <div class="box_div2">
         <div>
-            <img src="sunset.jpg" width="270px">
+            <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title8</div>
     </div>
 </div>
 </body>
-</html>
+</html>
 
 
 
