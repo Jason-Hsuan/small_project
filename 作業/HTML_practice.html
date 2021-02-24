@@ -7,19 +7,14 @@
 <style type = "text/css">
 
 .head_box{ 
-    display:flex;flex-wrap: wrap;
-    padding:10px;
+    display:flex;flex-wrap: wrap;background-color: red;
 }
-.head_box>.head_table1{
-    color:rgb(3, 3, 3);font-weight:bold;font-size:20px;
+.head_table1{
+    flex:none;color:rgb(3, 3, 3);font-weight:bold;font-size:20px;
     float:left;padding:10px;
 }
-.head_box>.head_table2{
-    font-weight:bold;font-size:20px;
-    padding:10px;
-}
-.head_box>.head_table3{
-    color:rgb(3, 3, 3);font-weight:bold;font-size:20px;
+.head_table2{
+    flex:none;color:rgb(3, 3, 3);font-weight:bold;font-size:20px;
     float:right;padding:10px;margin-left: auto;
 }
 
@@ -28,33 +23,38 @@
 } 
 
 .middle_box{
-    display:flex;
-    justify-content: center;align-items: center; 
-    background-color: #B0D8FF;height: 300px;padding:10px;width: 100%;
+    display:flex;justify-content: center;align-items: center;flex:auto;
+    background-color: #B0D8FF;height: 300px;padding:10px;
 }
 
-.middle_box>.content{
+.content{
     color:rgb(3, 3, 3);font-weight:bold;font-size:40px;text-align: center;
 }
 
 .box_div {
-    display: flex; justify-content:space-around ;align-content: center;width:1200px ;
+    display: flex; justify-content:space-around ;align-content: center;max-width:1200px ;
     padding-top:20px; margin:0% auto ;
     flex-wrap: wrap;
 } 
 
 .box_div2 {
-    padding: 0% auto;align-items: center;flex-wrap: wrap;max-width: 20%;margin:1%;
+    padding:0% auto;align-items: center;flex-wrap: wrap;max-width: 20%;margin:1%;
 } 
 
 .caption{
     margin-top:-5px;padding: 0% auto; 
     width:100% ;background-color: #B0D8FF;color:black;
-    text-align: center;
+    text-align: center;font-weight:bold;
 } 
-@media (max-width:1200px){
+@media screen and (max-width:1200px){
+    .head_box{
+        max-width: 100%;
+    }
+    .middle_box{
+        max-width: 100%;
+    } 
     .box_div{
-        width: 1080px;
+        max-width: 90%;
     }
     .box_div2{
         flex: 45%;
@@ -62,18 +62,24 @@
         align-content: center;
     }
 }
-@media (max-width:600px){
+@media screen and (max-width:600px){
+    .head_box{
+        max-width: 100%;
+    }
+    .middle_box{
+        max-width: 100%;
+    } 
     .box_div{
-        width: 540px;
+        max-width: 90%;
     }
     .box_div2{
         flex: 90%;
         max-width: 90%;
         align-content: center;
         }
-    .head_table3{
+    .head_table2{
         display:none;
-        }
+        } 
     .change_img{
         display:block;
         }
@@ -84,8 +90,7 @@
 <body style="margin:0px; background-color: #eeeeee;">
     <div class="head_box">
         <div class="head_table1">My Website</div>
-        <!-- <div class="head_table2"></div> -->
-        <div class="head_table3">Item1 Item2 Itme3 Item4</div>
+        <div class="head_table2">Item1 Item2 Itme3 Item4</div>
         <img src="hamburger.png" width="40px" class="change_img">
     </div> 
     <div class="middle_box">
@@ -93,25 +98,25 @@
     </div>
 <div class="box_div">
     <div class="box_div2">
-        <div>
+        <div class="img">
             <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title1</div>
     </div>
     <div class="box_div2">
-        <div>
+        <div class="img">
             <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title2</div>
     </div>
     <div class="box_div2">
-        <div>
+        <div class="img">
             <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title3</div>
     </div>
     <div class="box_div2">
-        <div>
+        <div class="img">
             <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title4</div>
@@ -141,8 +146,8 @@
             <img src="sunset.jpg" width="100%">
         </div>
         <div class="caption">Title8</div>
-    </div>
-</div>
+    </div> 
+</div> 
 </body>
 </html>
 
